@@ -1,0 +1,62 @@
+### Récupérer tous les messages (limité à 250 messages)
+GET http://localhost:3000/api/messages
+Content-Type: application/json
+
+###
+
+### Récupérer un message par ID
+GET http://localhost:3000/api/messages/1
+Content-Type: application/json
+
+###
+
+### Récupérer les messages par description (texte "test")
+GET http://localhost:3000/api/messages/description/test
+Content-Type: application/json
+
+###
+### Récupérer les messages par titre (texte "Bonjour")
+GET http://localhost:3000/api/messages/titre/Bonjour
+Content-Type: application/json
+
+###
+
+### Récupérer les messages par auteur (texte "Alice")
+GET http://localhost:3000/api/messages/auteur/Alice
+Content-Type: application/json
+
+###
+
+### Supprimer un message par ID
+DELETE http://localhost:3000/api/messages/2
+Content-Type: application/json
+
+###
+
+### Ajouter un nouveau message
+POST http://localhost:3000/api/messages
+Content-Type: application/json
+
+{
+  "_id": 5,
+  "titre": "Nouveau message",
+  "description": "Ceci est un nouveau message ajouté via l'API.",
+  "auteur": "David",
+  "date": "2024-09-23T12:45:00Z"
+}
+
+
+
+
+###
+
+### Modifier un message existant par ID
+PUT http://localhost:3000/api/messages/4
+Content-Type: application/json
+
+{
+  "titre": "Message mis à jour",
+  "description": "Le message a été modifié avec succès.",
+  "auteur": "David",
+  "date": "2024-09-23T12:45:00Z"
+}
